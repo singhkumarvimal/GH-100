@@ -1,0 +1,16 @@
+name: testworkflow
+on:
+  push:
+    branches: [$default-branch]
+  pull_request:
+    branches: [$default-branch]
+jobs:
+  build:
+    runs-on: ubuntu-lates
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: run a one line script
+        run: hello from testworkflow
+    
